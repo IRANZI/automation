@@ -1,18 +1,23 @@
 const wrapper = document.querySelector('.wrapper');
 const loginLink = document.querySelector('.login-link');
-const registerLink = document.querySelector('register-link');
-const btnPopup = document.querySelector('btnLogin-Popup');
-registerLink.addEventListener('click',()=>{
+const registerLink = document.querySelector('.register-link'); // Fixed the selector here
+const btnPopup = document.querySelector('.btnLogin-popup'); // Fixed the selector here
+
+const iconClose = document.querySelector('.icon-close'); // Fixed the selector here
+
+
+registerLink.addEventListener('click', ()=>  {
     wrapper.classList.add('active');
 });
 
-
-loginLink.addEventListener('click',()=>{
+loginLink.addEventListener('click', ()=> {
     wrapper.classList.remove('active');
 });
 
-
-btnPopupk.addEventListener('click',()=>{
-    wrapper.classList.remove('active-popup');
+btnPopup.addEventListener('click', ()=> {
+    wrapper.classList.add('active-popup');
 });
 
+iconClose.addEventListener('click', ()=> {
+    wrapper.classList.remove('active-popup');
+});
